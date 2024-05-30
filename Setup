@@ -1,1 +1,30 @@
+def is_profitable(time, probability, efficiency, precision):
+    """
+    Determine if the setup is profitable.
+
+    Parameters:
+    time (float): Time in minutes
+    probability (float): Probability in %
+    efficiency (float): Efficiency factor
+    precision (float): Precision factor
+
+    Returns:
+    bool: True if profitable, False otherwise
+    """
+    # Calculate profitability (example formula)
+    profitability = (efficiency * precision / 100) * probability - time
+    
+    # Determine if profitable (example threshold is 0)
+    return profitability > 0
+
+# Example usage
+time = float(input("Enter time (in minutes): "))
+probability = float(input("Enter probability (in %): "))
+efficiency = float(input("Enter efficiency: "))
+precision = float(input("Enter precision: "))
+
+if is_profitable(time, probability, efficiency, precision):
+    print("The setup is profitable.")
+else:
+    print("The setup is not profitable.")
 
